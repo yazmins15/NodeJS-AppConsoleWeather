@@ -19,9 +19,7 @@ export class Busquedas {
     });
   }
 
-  //https://api.mapbox.com/geocoding/v5/mapbox.places/VERAC.json?proximity=ip&language=es&access_token=pk.eyJ1IjoieWF6bWluc29yaWFubyIsImEiOiJjbGZza2xycjgwNnowM2twcTcyMDB0dWhpIn0.ApZAgy7Kxy2h8uPzHwYhAw
-
-  get paramsMapbox() {
+   get paramsMapbox() {
     return {
       access_token: process.env.MAPBOX_KEY || '',
       limit: 5,
@@ -29,7 +27,7 @@ export class Busquedas {
       proximity: 'ip',
     };
   }
-  //https://api.openweathermap.org/data/2.5/weather?lat=19.179886&lon=-96.135648&appid=bb54d08f59755fb2735e25ec8ebd68e6&units=metric&lang=es
+ 
   get paramsOpenWeather() {
     return {
       appid: process.env.OPENWEATHER_KEY,
